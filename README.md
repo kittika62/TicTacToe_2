@@ -17,9 +17,38 @@ This project is a simple Tic-Tac-Toe game built with Flutter and Firebase. The g
 - **Firebase**: Firebase Firestore is used to store the game history.
 - **GetX**: Used for state management, making it easier to update UI and manage states like grid size and player turns.
 
-## Installation
+## Example App
+Here is an example of the game in action:
 
-1. **Clone the repository:**
+1. **Main App:**
+
+  ```bash
+  (images/001.png)
+  ```
+
+2. **Game Page**
+
+  ```bash
+  (images/002.png)
+  ```
+
+3. **Overall**
+
+  ```bash
+  ![Example Game Play](images/003.png)
+  ```
+
+4. **Run the App:**
+
+  ```bash
+  (images/004.png)
+  ```
+
+## Usage Example
+
+```bash
+![Example Game History](images/005.png)
+```
 
     ```bash
     git clone <repository-url>
