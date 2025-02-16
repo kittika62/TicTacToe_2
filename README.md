@@ -23,19 +23,19 @@ Here is an example of the game in action:
 
 1. **Main App Screen:**
 
-    ![Main App](./assets/example/001.png)
+    ![Main App](./assets/images/example/001.png)
 
 2. **Game Page:**
 
-    ![Game Page](./assets/example/003.png)
+    ![Game Page](./assets/images/example/003.png)
 
 3. **Game in Progress:**
 
-    ![Example Game Play](./assets/example/004.png)
+    ![Example Game Play](./assets/images/example/004.png)
 
 4. **History Screen:**
 
-    ![Game History](./assets/example/005.png)
+    ![Game History](./assets/images/example/005.png)
 
 ## Installation
 
