@@ -31,7 +31,7 @@ Here is an example of the game in action:
 
 3. **Game in Progress:**
 
-    ![Example Game Play](./assets/example/004.png)
+    ![Example Game Play](./assets/images/example/004.png)
 
 4. **History Screen:**
 
