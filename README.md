@@ -13,42 +13,33 @@ This project is a simple Tic-Tac-Toe game built with Flutter and Firebase. The g
   
 ## Technologies Used
 
-- **Flutter**: The app is developed using Flutter, a UI toolkit for building natively compiled applications for mobile, web, and desktop.
-- **Firebase**: Firebase Firestore is used to store the game history.
-- **GetX**: Used for state management, making it easier to update UI and manage states like grid size and player turns.
+- **Flutter:** The app is developed using Flutter, a UI toolkit for building natively compiled applications for mobile, web, and desktop.
+- **Firebase:** Firebase Firestore is used to store the game history.
+- **GetX:** Used for state management, making it easier to update UI and manage states like grid size and player turns.
 
 ## Example App
+
 Here is an example of the game in action:
 
-1. **Main App:**
+1. **Main App Screen:**
 
-  ```bash
-  (images/001.png)
-  ```
+    ![Main App](./assets/example/001.png)
 
-2. **Game Page**
+2. **Game Page:**
 
-  ```bash
-  (images/002.png)
-  ```
+    ![Game Page](./assets/example/003.png)
 
-3. **Overall**
+3. **Game in Progress:**
 
-  ```bash
-  ![Example Game Play](images/003.png)
-  ```
+    ![Example Game Play](./assets/example/004.png)
 
-4. **Run the App:**
+4. **History Screen:**
 
-  ```bash
-  (images/004.png)
-  ```
+    ![Game History](./assets/example/005.png)
 
-## Usage Example
+## Installation
 
-```bash
-![Example Game History](images/005.png)
-```
+1. **Clone the repository:**
 
     ```bash
     git clone <repository-url>
@@ -89,7 +80,7 @@ This class manages the game's state and interactions with Firebase. It handles:
 - Saving the game history to Firebase Firestore.
 - Checking for winners and handling draws.
 
-### `Displayhistory.dart`
+### `DisplayHistory.dart`
 
 This class displays the game history from Firebase Firestore. It shows the previous games, the winner, and the game's grid as it was played. The user can also change the grid size here to view different historical games.
 
