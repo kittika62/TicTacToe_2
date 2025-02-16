@@ -74,11 +74,25 @@ class Controller extends GetxController {
       int start = row * N;
       if (gameValue[start] != "" &&
           List.generate(N, (i) => gameValue[start + i]).toSet().length == 1) {
-        history.add({
-          'createdAt': FieldValue.serverTimestamp(),
-          'history': gameValue[start],
-          'log': List.from(gameValue),
-        });
+        if (gridSize.value == 3) {
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[start],
+            'log3': List.from(gameValue),
+          });
+        }else if(gridSize.value == 4){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[start],
+            'log4': List.from(gameValue),
+          });
+        }else if(gridSize.value == 5){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[start],
+            'log5': List.from(gameValue),
+          });
+        }
         print("Save to firebase: ${List.from(gameValue)}");
         winnerDialogBox(gameValue[start]);
         return;
@@ -89,11 +103,25 @@ class Controller extends GetxController {
     for (int col = 0; col < N; col++) {
       if (gameValue[col] != "" &&
           List.generate(N, (i) => gameValue[col + i * N]).toSet().length == 1) {
-        history.add({
-          'createdAt': FieldValue.serverTimestamp(),
-          'history': gameValue[col],
-          'log': List.from(gameValue),
-        });
+       if (gridSize.value == 3) {
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[col],
+            'log3': List.from(gameValue),
+          });
+        }else if(gridSize.value == 4){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[col],
+            'log4': List.from(gameValue),
+          });
+        }else if(gridSize.value == 5){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[col],
+            'log5': List.from(gameValue),
+          });
+        }
         print("Save to firebase: ${List.from(gameValue)}");
         winnerDialogBox(gameValue[col]);
         return;
@@ -103,11 +131,25 @@ class Controller extends GetxController {
     // ตรวจสอบแนวทแยงมุมหลัก (\)
     if (gameValue[0] != "" &&
         List.generate(N, (i) => gameValue[i * (N + 1)]).toSet().length == 1) {
-      history.add({
-        'createdAt': FieldValue.serverTimestamp(),
-        'history': gameValue[0],
-        'log': List.from(gameValue),
-      });
+      if (gridSize.value == 3) {
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[0],
+            'log3': List.from(gameValue),
+          });
+        }else if(gridSize.value == 4){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[0],
+            'log4': List.from(gameValue),
+          });
+        }else if(gridSize.value == 5){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[0],
+            'log5': List.from(gameValue),
+          });
+        }
       print("Save to firebase: ${List.from(gameValue)}");
       winnerDialogBox(gameValue[0]);
       return;
@@ -115,25 +157,54 @@ class Controller extends GetxController {
 
     // ตรวจสอบแนวทแยงมุมรอง (/)
     if (gameValue[N - 1] != "" &&
-        List.generate(N, (i) => gameValue[(i + 1) * (N - 1)]).toSet().length == 1) {
+        List.generate(N, (i) => gameValue[(i + 1) * (N - 1)]).toSet().length ==
+            1) {
+      if (gridSize.value == 3) {
           history.add({
-          'createdAt': FieldValue.serverTimestamp(),
-          'history': gameValue[N - 1],
-          'log': List.from(gameValue),
-        });
-        print("Save to firebase: ${List.from(gameValue)}");
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[N - 1],
+            'log3': List.from(gameValue),
+          });
+        }else if(gridSize.value == 4){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[N - 1],
+            'log4': List.from(gameValue),
+          });
+        }else if(gridSize.value == 5){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': gameValue[N - 1],
+            'log5': List.from(gameValue),
+          });
+        }
+      print("Save to firebase: ${List.from(gameValue)}");
       winnerDialogBox(gameValue[N - 1]);
       return;
     }
 
     // ตรวจสอบว่าเสมอหรือไม่
     if (!gameValue.contains("")) {
-      history.add({
-          'createdAt': FieldValue.serverTimestamp(),
-          'history': "Draw",
-          'log': List.from(gameValue),
-        });
-        print("Save to firebase: ${List.from(gameValue)}");
+      if (gridSize.value == 3) {
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': "Draw",
+            'log3': List.from(gameValue),
+          });
+        }else if(gridSize.value == 4){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': "Draw",
+            'log4': List.from(gameValue),
+          });
+        }else if(gridSize.value == 5){
+          history.add({
+            'createdAt': FieldValue.serverTimestamp(),
+            'history': "Draw",
+            'log5': List.from(gameValue),
+          });
+        }
+      print("Save to firebase: ${List.from(gameValue)}");
       matchDrawMessage();
     }
   }
