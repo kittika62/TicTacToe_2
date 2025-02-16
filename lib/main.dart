@@ -8,7 +8,7 @@ import 'controller.dart';
 // import 'HomePage.dart';
 import 'testfirebase.dart';
 
-void main() async{
+void main() async{// ✅ ต้องใช้ async เพื่อใช้ await
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();  // ✅ เรียกใช้ Firebase ก่อน
   Get.put(Controller()); // ลงทะเบียน Controller
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           onPressed: () {
             Get.to(() => HomePage());
           },
-          child: Text("เริ่มเกม"),
+          child: Text("Game start"),
         ),
       ),
     );

@@ -15,7 +15,7 @@ class _DisplayhistoryState extends State<Displayhistory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: StreamBuilder(
+      body: StreamBuilder(// ใช้ StreamBuilder ในการดึงข้อมูลจาก Firebase
         stream: FirebaseFirestore.instance
             .collection("Game_history")
             .orderBy('createdAt', descending: true)
