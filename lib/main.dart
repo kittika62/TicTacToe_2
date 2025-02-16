@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
                       foregroundColor:
                           WidgetStateProperty.all<Color>(Colors.white),
                       backgroundColor: WidgetStateProperty.all<Color>(
-                          const Color(0xFF5B5693)),
+                          const Color(0xFF5B5693)), 
                       shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24),

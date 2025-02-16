@@ -106,7 +106,7 @@ class GamePage extends StatelessWidget {
                             ),
                             SizedBox(height: 3),
                             Text(
-                              "Player 2",
+                              "Player 1",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.white,
